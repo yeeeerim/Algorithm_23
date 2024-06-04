@@ -24,24 +24,18 @@ function solution(board) {
         let moveAtX = now[1];
         let moveAtY = now[0];
         if(i === 3) { // X 좌표 --
-            while(isMovable(moveAtY, --moveAtX)) {
-            }
+            while(isMovable(moveAtY, --moveAtX)) {}
             moveAtX++;
         } else if(i === 2) { // Y 좌표 ++
-             while(isMovable(++moveAtY, moveAtX)) {
-            }
+            while(isMovable(++moveAtY, moveAtX)) {}
             moveAtY--;
-            
         } else if(i === 1) { // X 좌표 ++
-             while(isMovable(moveAtY, ++moveAtX)) {
-            }
+            while(isMovable(moveAtY, ++moveAtX)) {}
             moveAtX--;
-            
         } else { // Y 좌표 --
             while(isMovable(--moveAtY, moveAtX)) {}
             moveAtY++;
         }
-        
         return [moveAtY, moveAtX]
     }
     
